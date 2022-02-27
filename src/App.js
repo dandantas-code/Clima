@@ -22,7 +22,7 @@ function App() {
     }
   }
 
-  const dateBuilder = (d) => {
+  const calendario = (d) => {
     let meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
     let dias = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
 
@@ -41,7 +41,7 @@ function App() {
           <input 
           type="text" 
           className="search-bar" 
-          placeholder="Search..."
+          placeholder="Digite o local..."
           onChange={e => setQuery(e.target.value)}
           value={query}
           onKeyPress={search}
@@ -52,7 +52,7 @@ function App() {
         <div>
           <div className="location-box">
             <div className="location">{weather.name}, {weather.sys.country}</div>
-            <div className="date">{dateBuilder(new Date())}</div>
+            <div className="date">{calendario(new Date())}</div>
           </div>
 
           <div className="weather-box">
